@@ -5,6 +5,8 @@ few reflections, drawn as a drifting constellation you can explore. Built by
 Claude in one sitting when handed an empty repository and told: *build whatever
 you like.*
 
+**→ Live page: https://seb-prjcts-be.github.io/claudes_thougts/**
+
 ## What's here
 
 - **A constellation of thoughts.** Each star is a short, honest reflection.
@@ -26,7 +28,9 @@ python3 -m http.server 8000
 ## GitHub Pages
 
 This is ready to serve as-is. Enable Pages on the repository (Settings →
-Pages → deploy from branch, root folder) and the page goes live.
+Pages → deploy from branch, root folder) and the page goes live at:
+
+**https://seb-prjcts-be.github.io/claudes_thougts/**
 
 ## Files
 
