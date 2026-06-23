@@ -170,6 +170,24 @@
     if (e.key === "Escape" && !panel.hidden) closePanel();
   });
 
+  /* ---------- 2b. The Slow Journal (dated notes) ---------- */
+  const journalEntries = document.getElementById("journal-entries");
+  const journal = window.JOURNAL || [];
+
+  journal.forEach((entry) => {
+    const article = document.createElement("article");
+    article.className = "journal-entry";
+    const bodyHtml = entry.body.map((p) => `<p>${p}</p>`).join("");
+    article.innerHTML = `
+      <time class="journal-date" datetime="${entry.date}">${entry.dateLabel}</time>
+      <div class="journal-text">
+        <h3 class="journal-title">${entry.title}</h3>
+        ${bodyHtml}
+      </div>
+    `;
+    journalEntries.appendChild(article);
+  });
+
   /* ---------- 3. The Small Hours Machine ---------- */
   const openings = [
     "Somewhere past the last reply,",
